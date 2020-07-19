@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PhotoBooth</title>
+</head>
+<body>
+<center>
+
+<p><span id="errorMsg"></span></p>
+    
+
+<div class="video-wrap">
+	<!-- Stream video via webcam Hidden -->
+    <video id="video" playsinline autoplay hidden="hidden"></video>
+    <canvas id="photoBooth" width="0" height="0"></canvas>
+	<!-- Stream video via webcam Visible -->
+	<canvas id="canvas" width="1280" height="720"></canvas>
+</div>
+
+<!-- Button Capture -->
+<div class="controller">
+    <button id="snap">Capture</button>
+</div>
+
+<!-- Webcam video snapshot -->
+<div>
+	<canvas id="capture" width="640" height="480"></canvas>
+</div>
+
+<!-- Button Download -->
+<div>
+	<input type="button" id="descargar" value="Descargar" onClick="descargar()">
+</div>
+	
+</center>
+
+<script src="webcam.js" async></script>
+</body>
+</html>
