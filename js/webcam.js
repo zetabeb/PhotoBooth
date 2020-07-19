@@ -9,7 +9,7 @@ const errorMsgElement = document.querySelector('span#errorMsg'); //Camera error 
 
 //Photo location
 var foto = {
-  url: "FOTOBOTH.png"
+  url: "Images/FOTOBOTH.png"
 };
 
 foto.imagen = new Image();
