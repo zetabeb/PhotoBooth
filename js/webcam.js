@@ -50,7 +50,7 @@ function handleSuccess(stream) {
 
 function photoKey(){    
     var context = canvas.getContext('2d');
-    context.drawImage(video, 50, 70, 640, 480);
+    context.drawImage(video, 120, 70, 640, 480);
     context.drawImage(foto.imagen, 0, 0, 1280, 720);
 }
 
