@@ -50,7 +50,7 @@ function handleSuccess(stream) {
 
 function photoKey(){    
     var context = canvas.getContext('2d');
-    context.drawImage(video, 120, 70, 640, 480);
+    context.drawImage(video, 120, 150, 640, 400);
     context.drawImage(foto.imagen, 0, 0, 1280, 720);
 }
 
@@ -60,8 +60,8 @@ init();
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
-    cxt.drawImage(video, 0, 0, 640, 480);
-    cxt.drawImage(foto.imagen, 0, 0, 640, 480);
+    cxt.drawImage(video, 60, 75, 320, 200);
+    cxt.drawImage(foto.imagen, 0, 0, 640, 360);
 });
 
 //Download Image
