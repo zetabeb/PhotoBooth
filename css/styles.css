@@ -27,8 +27,8 @@ button:hover {
 button#snap{
 	position: absolute;
 	margin: auto;
-	top: 540px;
-	left: 700px;
+	top: 510px;
+	left: 555px;
 	right: 0px;
 	z-index: 100;
 }
@@ -48,7 +48,7 @@ div#zonaCapture div#buttons{
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;	
-	top: 550px;
-	left: 699px;
+	top: 515px;
+	left: 550px;
 	right: 0px;
 }

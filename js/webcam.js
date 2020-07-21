@@ -30,7 +30,7 @@ fondoCapture.imagen.src = fondoCapture.url;
 const constraints = {
     audio: false,
     video: {
-        width: 1280, height: 720
+        width: 1024, height: 664
     }
 };
 
@@ -63,8 +63,8 @@ function handleSuccess(stream) {
 
 function photoKey(){    
     var context = canvas.getContext('2d');
-    context.drawImage(video, 120, 150, 640, 400);
-    context.drawImage(foto.imagen, 0, 0, 1280, 720);
+    context.drawImage(video, 40, 150, 640, 400);
+    context.drawImage(foto.imagen, 0, 0, 1024, 664);
 }
 
 // Load init
@@ -73,9 +73,9 @@ init();
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
-    cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 740);
-    cxt.drawImage(video, 130, 160, 640, 400);
-    cxt.drawImage(foto.imagen, 10, 10, 1280, 720);
+    cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
+    cxt.drawImage(video, 50, 160, 640, 400);
+    cxt.drawImage(foto.imagen, 11, 8, 1024, 664);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
     back.style.visibility = "visible";
