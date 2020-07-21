@@ -63,7 +63,7 @@ function handleSuccess(stream) {
 
 function photoKey(){    
     var context = canvas.getContext('2d');
-    context.drawImage(video, 40, 150, 640, 400);
+    context.drawImage(video, 80, 181, 520, 321);
     context.drawImage(foto.imagen, 0, 0, 1024, 664);
 }
 
@@ -74,7 +74,7 @@ init();
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
     cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
-    cxt.drawImage(video, 50, 160, 640, 400);
+    cxt.drawImage(video, 90, 189, 520, 321);
     cxt.drawImage(foto.imagen, 11, 8, 1024, 664);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
