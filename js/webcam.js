@@ -3,10 +3,13 @@
 const video = document.getElementById('video'); //video Stream hidden
 const canvas = document.getElementById('canvas'); //video Stream Visible
 const capture = document.getElementById('capture'); //Canvas of photo capture
-const snap = document.getElementById("snap"); //Button Capture
-const guardar = document.getElementById("descargar"); //Button Photo Save
 const photoBooth = document.getElementById('photoBooth'); //Image PhotoBooth
-const errorMsgElement = document.querySelector('span#errorMsg'); //Camera error Message
+//Camera error Message
+const errorMsgElement = document.querySelector('span#errorMsg'); 
+//Buttons
+const snap = document.getElementById("snap"); //Capture
+const save = document.getElementById("save"); //Photo Save
+const back = document.getElementById("back"); //Back
 
 //Photo location
 var foto = {
@@ -33,7 +36,8 @@ const constraints = {
 
 // Access webcam
 async function init() {
-    guardar.style.visibility = "hidden";
+    save.style.visibility = "hidden";
+    back.style.visibility = "hidden";
     try {
         const stream = await navigator.mediaDevices.getUserMedia(constraints);
         handleSuccess(stream);
@@ -73,11 +77,12 @@ snap.addEventListener("click", function() {
     cxt.drawImage(video, 130, 160, 640, 400);
     cxt.drawImage(foto.imagen, 10, 10, 1280, 720);
     snap.style.visibility = "hidden";
-    guardar.style.visibility = "visible";
+    save.style.visibility = "visible";
+    back.style.visibility = "visible";
 });
 
 //Download Image
-guardar.addEventListener("click", function(){
+save.addEventListener("click", function(){
     let filename = prompt("Guardar como",""),
     link = document.createElement('a');
 
@@ -100,5 +105,12 @@ guardar.addEventListener("click", function(){
     link.click();
     
 });
+
+back.addEventListener("click", function(){
+    save.style.visibility = "hidden";
+    back.style.visibility = "hidden";
+    snap.style.visibility = "visible";
+    capture.width = capture.width;
+})
 
 
