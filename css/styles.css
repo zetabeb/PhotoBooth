@@ -14,6 +14,10 @@ button{
     border-radius: 8px 8px 8px 8px;
     color: white;
 }
+button img{
+	width: 150px;
+	height: 38px;
+}
 button:hover {
     background-color: rgba(182,240,228,0.6);
 }
