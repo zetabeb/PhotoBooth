@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PhotoBooth</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-<center>
 
 <p><span id="errorMsg"></span></p>
     
@@ -24,16 +24,16 @@
 </div>
 </br></br>
 <!-- Webcam video snapshot -->
-<div>
-	<canvas id="capture" width="640" height="400"></canvas>
+<div id="zonaCapture">
+	<canvas id="capture" width="1300" height="740"></canvas>
+	<button id="descargar">Guardar como...</button>
 </div>
 
 <!-- Button Download -->
 <div>
-	<input type="button" id="descargar" value="Guardar como..." onClick="descargar()">
+	
 </div>
 	
-</center>
 
 <script src="js/webcam.js" async></script>
 </body>
