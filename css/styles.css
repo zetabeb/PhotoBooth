@@ -26,11 +26,42 @@ button:hover {
 }
 .text{
 	z-index: 120;
-	font-family: Helvetica;
-	left: 600px;
+	font-family: Helvetica;	
+	right: 800px;
+	width: 550px;
+	height: 50px;
 	position: absolute;
 	top: 525px;
 }
+@media (min-width: 320px) {
+	.text{
+		width: 264px;
+		left: 236px;
+		font-size: 10px;
+	}
+}
+@media (min-width: 1044px) {
+	.text{
+		font-size: 12px;
+		width: 264px;
+		left: 236px;
+	}
+}
+@media (min-width: 1300px) {
+	.text{
+		font-size: 13px;
+		width: 408px;
+		left: 356px;
+	}
+}
+@media (min-width: 1700px) {
+	.text{
+		width: 550px;
+		left: 511px;
+		font-size: 15px;
+	}
+}
+
 button#snap{
 	position: absolute;
 	margin: auto;
