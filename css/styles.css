@@ -42,13 +42,19 @@ canvas {
 		transform: scale(0.6);
 	}*/
 	.video-wrap{
-		left: -142px;
-		top: -271px;
+		/* left: -142px; */
+		/* top: -271px; */
 	}
 	.text{
 		width: 264px;
-		left: 236px;
+		left: 80px;
 		font-size: 10px;
+		top: 320px;
+	}
+	button#snap
+	{
+		left: 310px;
+		top:300px;
 	}
 }
 @media (min-width: 1044px) {
