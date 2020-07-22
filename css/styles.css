@@ -36,11 +36,11 @@ button:hover {
 canvas {
     max-width: 100%;
 }
-/*
+
 @media (min-width: 320px) {
-	.all{
+	/*.all{
 		transform: scale(0.6);
-	}
+	}*/
 	.video-wrap{
 		left: -142px;
 		top: -271px;
@@ -57,9 +57,9 @@ canvas {
 		width: 264px;
 		left: 236px;
 	}
-	.all{
+	/*.all{
 		transform: scale(0.9);
-	}
+	}*/
 	.video-wrap{
 		left: 0px;
 		top: 0px;
@@ -71,9 +71,9 @@ canvas {
 		width: 408px;
 		left: 356px;
 	}
-	.all{
+	/*.all{
 		transform: scale(1);
-	}
+	}*/
 }
 @media (min-width: 1360px) {
 	.text{
@@ -87,7 +87,7 @@ canvas {
 		font-size: 15px;
 	}
 }
-*/
+
 
 button#snap{
 	position: absolute;
