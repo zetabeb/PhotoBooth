@@ -24,6 +24,13 @@ button:hover {
 .video-wrap{
  	position: relative; 
 }
+.text{
+	z-index: 120;
+	font-family: Helvetica;
+	left: 600px;
+	position: absolute;
+	top: 525px;
+}
 button#snap{
 	position: absolute;
 	margin: auto;

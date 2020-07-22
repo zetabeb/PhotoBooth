@@ -83,7 +83,7 @@ snap.addEventListener("click", function() {
 
 //Download Image
 save.addEventListener("click", function(){
-    let filename = prompt("Guardar como",""),
+    let filename = prompt("Recuerda enviarnos tu foto a webinar@lanzamientorevestive.com \n \n Guardar como...",""),
     link = document.createElement('a');
 
     //Option cancel
