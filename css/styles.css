@@ -68,6 +68,9 @@ button:hover {
 		width: 408px;
 		left: 356px;
 	}
+	.all{
+		transform: scale(1);
+	}
 }
 @media (min-width: 1360px) {
 	.text{
