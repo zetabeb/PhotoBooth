@@ -62,9 +62,8 @@ button:hover {
 	position: absolute;
 	top: 530px;
 }
-canvas
-{
-	max-width: 100%;
+canvas {
+    max-width: 100%;
 }
 /*
 @media (min-width: 320px) {
