@@ -16,7 +16,8 @@ button{
 }
 button img{
 	width: 150px;
-	height: 38px;
+	height: auto;
+	max-width: 100%;
 }
 button:hover {
     background-color: rgba(182,240,228,0.6);
@@ -33,11 +34,46 @@ button:hover {
 	position: absolute;
 	top: 530px;
 }
+button#snap{
+	position: absolute;
+	margin: auto;
+	top: 510px;
+	left: 555px;
+	right: 0px;
+	z-index: 200;
+}
+
+/*
+canvas#canvas{
+	transform: scale(-1,1);
+}
+*/
+
+#zonaCapture{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	top: 10px;
+}
+
+div#zonaCapture div#buttons{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;	
+	top: 515px;
+	left: 550px;
+	right: 0px;
+}
+
 canvas {
     max-width: 100%;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 700px) {
 	/*.all{
 		transform: scale(0.6);
 	}*/
@@ -47,14 +83,30 @@ canvas {
 	}
 	.text{
 		width: 264px;
-		left: 80px;
-		font-size: 10px;
-		top: 320px;
+		left: -33px;
+		font-size: 5px;
+		top: 163px;
 	}
 	button#snap
 	{
-		left: 310px;
-		top:300px;
+		left: 155px;
+		top: 155px;
+		width: 80px;
+	}
+	div#zonaCapture div#buttons
+	{
+		width: 125px;
+		left: 160px;
+		top: 143px;
+	}
+	div#zonaCapture div#buttons button
+	{
+		width: 60px;
+		margin: 0;
+	}
+	#zonaCapture
+	{
+		top:25px;
 	}
 }
 @media (min-width: 1044px) {
@@ -92,40 +144,4 @@ canvas {
 		left: 511px;
 		font-size: 15px;
 	}
-}
-
-
-button#snap{
-	position: absolute;
-	margin: auto;
-	top: 510px;
-	left: 555px;
-	right: 0px;
-	z-index: 100;
-}
-
-/*
-canvas#canvas{
-	transform: scale(-1,1);
-}
-*/
-
-#zonaCapture{
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	justify-content: center;
-	left: 0;
-	right: 0;
-	top: 10px;
-}
-
-div#zonaCapture div#buttons{
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;	
-	top: 515px;
-	left: 550px;
-	right: 0px;
 }
