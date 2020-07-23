@@ -98,6 +98,7 @@ canvas {
 		width: 125px;
 		left: 160px;
 		top: 143px;
+		z-index: 200;
 	}
 	div#zonaCapture div#buttons button
 	{
