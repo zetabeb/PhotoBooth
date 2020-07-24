@@ -42,6 +42,24 @@ button#snap{
 	right: 0px;
 	z-index: 200;
 }
+button#toggleFullScreenButton{
+	position: absolute;
+	margin: auto;
+	top: 554px;
+	left: 938px;
+	right: 350px;
+	z-index: 200;
+	width: 35px;
+}
+button#switchCameraButton{
+	position: absolute;
+	margin: auto;
+	top: 553px;
+	left: 896px;
+	right: 391px;
+	z-index: 200;
+	width: 37px;
+}
 
 /*
 canvas#canvas{
@@ -89,6 +107,17 @@ canvas {
 	}
 	button#snap
 	{
+		left: 155px;
+		top: 155px;
+		width: 80px;
+	}
+	button#toggleFullScreenButton{
+		left: 347px;
+	    top: 276px;
+	    width: 24px;
+	    right: 214px;
+	}
+	button#switchCameraButton{
 		left: 155px;
 		top: 155px;
 		width: 80px;
