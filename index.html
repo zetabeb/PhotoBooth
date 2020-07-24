@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
 	<title>PhotoBooth</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -13,7 +13,7 @@
 <div class="all">
 	<div class="video-wrap">
 		<!-- Stream video via webcam Hidden -->
-	    <video id="video" playsinline autoplay hidden="hidden"></video>
+	    <video id="video" playsinline autoplay hidden="true"></video>
 	    <canvas id="photoBooth" width="0" height="0"></canvas>
 		<!-- Stream video via webcam Visible -->
 		<canvas id="canvas" width="1024" height="664"></canvas>
@@ -25,6 +25,8 @@
 		<!-- Button Capture -->
 		<div class="controller">
 		    <button id="snap"><img src="Images/snap.png"></button>
+		    <button id="switchCameraButton" type="button" aria-pressed="false"><img src="Images/snap.png"></button>
+		    <button id="toggleFullScreenButton" type="button" aria-pressed="false" hidden><img src="Images/snap.png"></button>
 		</div>
 	</div>
 
@@ -38,7 +40,7 @@
 		
 	</div>
 </div>
-
-<script src="js/webcam.js" async></script>
+<script src="js/screenfull.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
