@@ -16,7 +16,8 @@ button{
 }
 button img{
 	width: 150px;
-	height: 38px;
+	height: auto;
+	max-width: 100%;
 }
 button:hover {
     background-color: rgba(182,240,228,0.6);
@@ -33,66 +34,13 @@ button:hover {
 	position: absolute;
 	top: 530px;
 }
-
-@media (min-width: 320px) {
-	.all{
-		transform: scale(0.6);
-	}
-	.video-wrap{
-		left: -142px;
-		top: -271px;
-	}
-	.text{
-		width: 264px;
-		left: 236px;
-		font-size: 10px;
-	}
-}
-@media (min-width: 1044px) {
-	.text{
-		font-size: 12px;
-		width: 264px;
-		left: 236px;
-	}
-	.all{
-		transform: scale(0.9);
-	}
-	.video-wrap{
-		left: 0px;
-		top: 0px;
-	}
-}
-@media (min-width: 1300px) {
-	.text{
-		font-size: 13px;
-		width: 408px;
-		left: 356px;
-	}
-	.all{
-		transform: scale(1);
-	}
-}
-@media (min-width: 1360px) {
-	.text{
-		left: 308px;
-	}
-}
-@media (min-width: 1700px) {
-	.text{
-		width: 550px;
-		left: 511px;
-		font-size: 15px;
-	}
-}
-
-
 button#snap{
 	position: absolute;
 	margin: auto;
 	top: 510px;
 	left: 555px;
 	right: 0px;
-	z-index: 100;
+	z-index: 200;
 }
 
 /*
@@ -119,4 +67,82 @@ div#zonaCapture div#buttons{
 	top: 515px;
 	left: 550px;
 	right: 0px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+	/*.all{
+		transform: scale(0.6);
+	}*/
+	.video-wrap{
+		/* left: -142px; */
+		/* top: -271px; */
+	}
+	.text{
+		width: 264px;
+		left: -33px;
+		font-size: 5px;
+		top: 163px;
+	}
+	button#snap
+	{
+		left: 155px;
+		top: 155px;
+		width: 80px;
+	}
+	div#zonaCapture div#buttons
+	{
+		width: 125px;
+		left: 160px;
+		top: 143px;
+		z-index: 199;
+	}
+	div#zonaCapture div#buttons button
+	{
+		width: 60px;
+		margin: 0;
+	}
+	#zonaCapture
+	{
+		top:25px;
+	}
+}
+@media (min-width: 1044px) {
+	.text{
+		font-size: 12px;
+		width: 264px;
+		left: 236px;
+	}
+	/*.all{
+		transform: scale(0.9);
+	}*/
+	.video-wrap{
+		left: 0px;
+		top: 0px;
+	}
+}
+@media (min-width: 1300px) {
+	.text{
+		font-size: 13px;
+		width: 408px;
+		left: 356px;
+	}
+	/*.all{
+		transform: scale(1);
+	}*/
+}
+@media (min-width: 1360px) {
+	.text{
+		left: 308px;
+	}
+}
+@media (min-width: 1700px) {
+	.text{
+		width: 550px;
+		left: 511px;
+		font-size: 15px;
+	}
 }
