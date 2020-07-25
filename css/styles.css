@@ -105,13 +105,7 @@ canvas {
 		font-size: 5px;
 		top: 163px;
 	}
-	button#snap
-	{
-		left: 155px;
-		top: 155px;
-		width: 80px;
-	}
-	button#toggleFullScreenButton{
+button#toggleFullScreenButton{
 		left: 347px;
 	    top: 276px;
 	    width: 24px;
@@ -122,6 +116,13 @@ canvas {
 		top: 155px;
 		width: 80px;
 	}
+	button#snap
+	{
+		left: 155px;
+		top: 155px;
+		width: 80px;
+	}
+	
 	div#zonaCapture div#buttons
 	{
 		width: 125px;
