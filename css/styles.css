@@ -108,13 +108,13 @@ canvas {
 button#toggleFullScreenButton{
 		left: 347px;
 	    top: 276px;
-	    width: 10px;
+	    width: 24px;
 	    right: 214px;
 	}
 	button#switchCameraButton{
 		left: 155px;
 		top: 155px;
-		width: 10px;
+		width: 24px;
 	}
 	button#snap
 	{
