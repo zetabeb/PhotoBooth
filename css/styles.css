@@ -90,7 +90,9 @@ div#zonaCapture div#buttons{
 canvas {
     max-width: 100%;
 }
-
+#extra img{
+	width: 100%;
+}
 @media (max-width: 700px) {
 	/*.all{
 		transform: scale(0.6);
@@ -98,6 +100,9 @@ canvas {
 	.video-wrap{
 		/* left: -142px; */
 		/* top: -271px; */
+	}
+	#extra img{
+		width: 100%;
 	}
 	.text{
 		width: 264px;
@@ -152,6 +157,20 @@ canvas {
 		left: 0px;
 		top: 0px;
 	}
+
+	#extra {
+		left: 0px;
+		right: 0px;
+		margin: auto;
+		text-align: center;
+		justify-content: center;
+		width: 1024px;
+	}
+	#extra img{
+		width: 100%;
+	}
+	
+
 }
 @media (min-width: 1300px) {
 	.text{
