@@ -22,7 +22,7 @@ const photoBooth = document.getElementById('photoBooth'); //Image PhotoBooth
 const save = document.getElementById("save"); //Photo Save
 const back = document.getElementById("back"); //Back
 var foto = {
-  url: "Images/FOTOBOTH.png"
+  url: "ImagesFOTOBOTH.png"
 };
 
 foto.imagen = new Image();
