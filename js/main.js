@@ -352,15 +352,7 @@ function createClickFeedbackUI() {
   };
 }
 
-
-function photoKey(){    
-    var context = canvas.getContext('2d');
-    //context.drawImage(video, 80, 181, 520, 321);
-    context.drawImage(video, 0, 0, 1024, 664);
-    context.drawImage(foto.imagen, 0, 0, 1024, 664);
-}
-
-//Cambiar Imagen
+//Change Photo
 changeFoto5.addEventListener("click", function(){    
     foto.imagen.src = foto5.url;
 });
@@ -386,13 +378,19 @@ changeFoto40.addEventListener("click", function(){
     foto.imagen.src = foto40.url;
 });
 
-
+//Camera ON
+function photoKey(){    
+    var context = canvas.getContext('2d');
+    //context.drawImage(video, 80, 181, 520, 321);
+    context.drawImage(video, 70, 0, 850, 950);
+    context.drawImage(foto.imagen, 0, 0, 1024, 664);
+}
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
     cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
-    cxt.drawImage(video, 11, 8, 1024, 664);
+    cxt.drawImage(video, 11, 8, 600, 664);
     cxt.drawImage(foto.imagen, 11, 8, 1024, 664);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
