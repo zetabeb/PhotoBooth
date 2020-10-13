@@ -106,25 +106,25 @@ canvas {
 	}
 	.text{
 		width: 264px;
-		left: -33px;
+		left: 10px;
 		font-size: 5px;
-		top: 163px;
+		top: 450px;
 	}
 	button#toggleFullScreenButton{
-		left: 347px;
-	    top: 276px;
+		left: 0px;
+	    top: 355px;
 	    width: 24px;
 	    right: 214px;
 	}
 	button#switchCameraButton{
 		left: 165px;
-		top: 155px;
+		top: 355px;
 		width: 24px;
 	}
 	button#snap
 	{
 		left: 155px;
-		top: 155px;
+		top: 355px;
 		width: 80px;
 	}
 	

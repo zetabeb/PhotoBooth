@@ -390,8 +390,8 @@ var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
     cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
-    cxt.drawImage(video, 11, 8, 600, 664);
-    cxt.drawImage(foto.imagen, 11, 8, 1024, 664);
+    cxt.drawImage(video, 81, 15, 850, 950);
+    cxt.drawImage(foto.imagen, 11, 0, 1024, 684);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
     back.style.visibility = "visible";
