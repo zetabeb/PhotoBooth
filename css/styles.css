@@ -89,7 +89,7 @@ div#zonaCapture div#buttons{
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;	
-	top: 515px;
+	top: 626px;
 	left: 550px;
 	right: 0px;
 }
@@ -138,8 +138,8 @@ canvas {
 	div#zonaCapture div#buttons
 	{
 		width: 125px;
-		left: 160px;
-		top: 143px;
+		left: 266px;
+		top: 272px;
 		z-index: 199;
 	}
 	div#zonaCapture div#buttons button

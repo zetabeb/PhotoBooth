@@ -395,6 +395,16 @@ snap.addEventListener("click", function() {
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
     back.style.visibility = "visible";
+    toggleFullScreenButton.style.visibility = "hidden";
+    switchCameraButton.style.visibility = "hidden";
+    changeFoto5.style.visibility = "hidden";
+    changeFoto10.style.visibility = "hidden";
+    changeFoto15.style.visibility = "hidden";
+    changeFoto20.style.visibility = "hidden";
+    changeFoto25.style.visibility = "hidden";
+    changeFoto30.style.visibility = "hidden";
+    changeFoto35.style.visibility = "hidden";
+    changeFoto40.style.visibility = "hidden";
 });
 
 //Download Image
@@ -425,6 +435,16 @@ save.addEventListener("click", function(){
 back.addEventListener("click", function(){
     save.style.visibility = "hidden";
     back.style.visibility = "hidden";
+    switchCameraButton.style.visibility = "visible";
+    toggleFullScreenButton.style.visibility = "visible";
     snap.style.visibility = "visible";
+    changeFoto5.style.visibility = "visible";
+    changeFoto10.style.visibility = "visible";
+    changeFoto15.style.visibility = "visible";
+    changeFoto20.style.visibility = "visible";
+    changeFoto25.style.visibility = "visible";
+    changeFoto30.style.visibility = "visible";
+    changeFoto35.style.visibility = "visible";
+    changeFoto40.style.visibility = "visible";
     capture.width = capture.width;
 })
