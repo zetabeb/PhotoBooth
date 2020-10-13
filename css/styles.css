@@ -32,7 +32,14 @@ button:hover {
 	width: 550px;
 	height: 50px;
 	position: absolute;
-	top: 620px;
+	top: 612px;
+}
+.text button{
+	border: 1px solid white;
+	padding: 9px;
+	background-color: #007f5d;
+	color: white;
+	margin-right: 2px;
 }
 button#snap{
 	position: absolute;
@@ -45,8 +52,8 @@ button#snap{
 button#toggleFullScreenButton{
 	position: absolute;
 	margin: auto;
-	top: 670px;
-	left: 938px;
+	top: 613px;
+	left: 1250px;
 	right: 350px;
 	z-index: 200;
 	width: 35px;
@@ -54,8 +61,8 @@ button#toggleFullScreenButton{
 button#switchCameraButton{
 	position: absolute;
 	margin: auto;
-	top: 670px;
-	left: 896px;
+	top: 613px;
+	left: 1190px;
 	right: 391px;
 	z-index: 200;
 	width: 37px;
@@ -105,26 +112,26 @@ canvas {
 		width: 100%;
 	}
 	.text{
-		width: 264px;
-		left: 10px;
+		width: 325px;
+		left: 56px;
 		font-size: 5px;
-		top: 450px;
+		top: 320px;
 	}
 	button#toggleFullScreenButton{
-		left: 0px;
-	    top: 355px;
+		left: 391px;
+	    top: 276px;
 	    width: 24px;
-	    right: 214px;
+	    right: 19px;
 	}
 	button#switchCameraButton{
-		left: 165px;
-		top: 355px;
+		left: 365px;
+		top: 276px;
 		width: 24px;
 	}
 	button#snap
 	{
-		left: 155px;
-		top: 355px;
+		left: 191px;
+		top: 276px;
 		width: 80px;
 	}
 	
@@ -147,13 +154,32 @@ canvas {
 }
 @media (min-width: 701px) {
 	.text{
-		left: 20px;
+		left: 116px;
+		width: 325px;
+	}
+	button#toggleFullScreenButton {
+    position: absolute;
+    margin: auto;
+    top: 613px;
+    left: 1012px;
+    right: 89px;
+    z-index: 200;
+    width: 35px;
+	}
+	button#switchCameraButton {
+    position: absolute;
+    margin: auto;
+    top: 613px;
+    left: 945px;
+    right: 150px;
+    z-index: 200;
+    width: 37px;
 	}
 }
 @media (min-width: 1044px) {
 	.text{
 		font-size: 12px;
-		width: 264px;
+		width: 334px
 		left: 110px;
 	}
 	/*.all{
@@ -184,9 +210,24 @@ canvas {
 		width: 408px;
 		left: 190px;
 	}
-	/*.all{
-		transform: scale(1);
-	}*/
+	button#switchCameraButton {
+    position: absolute;
+    margin: auto;
+    top: 613px;
+    left: 1035px;
+    right: 259px;
+    z-index: 200;
+    width: 37px;
+	}
+	button#toggleFullScreenButton {
+    position: absolute;
+    margin: auto;
+    top: 613px;
+    left: 1088px;
+    right: 207px;
+    z-index: 200;
+    width: 35px;
+	}
 }
 @media (min-width: 1360px) {
 	.text{
@@ -201,7 +242,7 @@ canvas {
 @media (min-width: 1700px) {
 	.text{
 		width: 550px;
-		left: 340px;
+		left: 383px;
 		font-size: 15px;
 	}
 }
