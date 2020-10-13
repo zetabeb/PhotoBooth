@@ -21,12 +21,45 @@ const photoBooth = document.getElementById('photoBooth'); //Image PhotoBooth
 //const snap = document.getElementById("snap"); //Capture
 const save = document.getElementById("save"); //Photo Save
 const back = document.getElementById("back"); //Back
-var foto = {
-  url: "ImagesFOTOBOTH.png"
+
+const changeFoto5 = document.getElementById("foto5");
+const changeFoto10 = document.getElementById("foto10");
+const changeFoto15 = document.getElementById("foto15");
+const changeFoto20 = document.getElementById("foto20");
+const changeFoto25 = document.getElementById("foto25");
+const changeFoto30 = document.getElementById("foto30");
+const changeFoto35 = document.getElementById("foto35");
+const changeFoto40 = document.getElementById("foto40");
+
+var foto ={
+};
+var foto5 = {
+  url: "Images/PHOTO5A0.png"
+};
+var foto10 = {
+  url: "Images/PHOTO10A0.png"
+};
+var foto15 = {
+  url: "Images/PHOTO15A0.png"
+};
+var foto20 = {
+  url: "Images/PHOTO20A0.png"
+};
+var foto25 = {
+  url: "Images/PHOTO25A0.png"
+};
+var foto30 = {
+  url: "Images/PHOTO30A0.png"
+};
+var foto35 = {
+  url: "Images/PHOTO35A0.png"
+};
+var foto40 = {
+  url: "Images/PHOTO40A0.png"
 };
 
 foto.imagen = new Image();
-foto.imagen.src = foto.url;
+foto.imagen.src = foto5.url;
 
 var fondoCapture = {
   url: "Images/fondoCapture.png"
@@ -322,15 +355,44 @@ function createClickFeedbackUI() {
 
 function photoKey(){    
     var context = canvas.getContext('2d');
-    context.drawImage(video, 80, 181, 520, 321);
+    //context.drawImage(video, 80, 181, 520, 321);
+    context.drawImage(video, 0, 0, 1024, 664);
     context.drawImage(foto.imagen, 0, 0, 1024, 664);
 }
+
+//Cambiar Imagen
+changeFoto5.addEventListener("click", function(){    
+    foto.imagen.src = foto5.url;
+});
+changeFoto10.addEventListener("click", function(){    
+    foto.imagen.src = foto10.url;
+});
+changeFoto15.addEventListener("click", function(){    
+    foto.imagen.src = foto15.url;
+});
+changeFoto20.addEventListener("click", function(){    
+    foto.imagen.src = foto20.url;
+});
+changeFoto25.addEventListener("click", function(){    
+    foto.imagen.src = foto25.url;
+});
+changeFoto30.addEventListener("click", function(){    
+    foto.imagen.src = foto30.url;
+});
+changeFoto35.addEventListener("click", function(){    
+    foto.imagen.src = foto35.url;
+});
+changeFoto40.addEventListener("click", function(){    
+    foto.imagen.src = foto40.url;
+});
+
 
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
     cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
-    cxt.drawImage(video, 90, 189, 520, 321);
+    //cxt.drawImage(video, 90, 189, 520, 321);
+    cxt.drawImage(video, 11, 8, 1024, 664);
     cxt.drawImage(foto.imagen, 11, 8, 1024, 664);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
