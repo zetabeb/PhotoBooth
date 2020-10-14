@@ -469,7 +469,7 @@ function photoKey(x1, y1, x2, y2){
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
-    cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
+    //cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
   if( !isMobile.any() && es_firefox) {
     cxt.drawImage(video, (camX1+10)-180, (camY1+15)+10, (camX2)+380, (camY2)-20);
