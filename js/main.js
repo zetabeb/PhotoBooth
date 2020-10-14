@@ -531,4 +531,8 @@ back.addEventListener("click", function(){
     changeFoto35.style.visibility = "visible";
     changeFoto40.style.visibility = "visible";
     capture.width = capture.width;
-})
+});
+
+jQuery(document).ready(function($){
+    $('.fancybox').fancybox();
+});
