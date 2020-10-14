@@ -100,6 +100,7 @@ canvas {
 #extra img{
 	width: 100%;
 }
+
 @media (max-width: 700px) {
 	/*.all{
 		transform: scale(0.6);
@@ -113,24 +114,26 @@ canvas {
 	}
 	.text{
 		width: 325px;
-		left: 56px;
+		left: 26px;
 		font-size: 5px;
 		top: 320px;
 	}
 	button#toggleFullScreenButton{
-		left: 391px;
+		left: 248px;
 	    top: 276px;
 	    width: 24px;
-	    right: 19px;
+	    right: 77px;
 	}
 	button#switchCameraButton{
-		left: 365px;
+		left: 194px;
+		right: 130px;
 		top: 276px;
 		width: 24px;
 	}
 	button#snap
 	{
-		left: 191px;
+		left: 77px;
+		right: 182px;
 		top: 276px;
 		width: 80px;
 	}
