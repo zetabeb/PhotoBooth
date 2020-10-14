@@ -55,6 +55,8 @@ const changeFoto30 = document.getElementById("foto30");
 const changeFoto35 = document.getElementById("foto35");
 const changeFoto40 = document.getElementById("foto40");
 
+var context = canvas.getContext('2d');
+
 var foto ={
 };
 var foto5 = {
@@ -88,7 +90,7 @@ foto.imagen.src = foto5.url;
 var fondoCapture = {
   url: "Images/fondoCapture.png"
 };
-
+var intervalPhotoBooth = null;
 fondoCapture.imagen = new Image();
 fondoCapture.imagen.src = fondoCapture.url;
 
@@ -122,7 +124,13 @@ function deviceCount() {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
+  save.style.visibility = "hidden";
+    back.style.visibility = "hidden";
+  intervalPhotoBooth = setInterval(() => {
+                context.drawImage(foto.imagen, 0, 0, 1024, 664);
+            }, 200)
   
+
   // check if mediaDevices is supported
   if (
     navigator.mediaDevices &&
@@ -163,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       'Mobile camera is not supported by browser, or there is no camera detected/connected',
     );
   }
+  //clearInterval(intervalPhotoBooth);
 });
 
 var  camX1 = 280;
@@ -170,9 +179,9 @@ var  camY1 = 40;
 var  camX2 = 520;
 var  camY2 = 530;
 
+
 function initCameraUI() {
-  save.style.visibility = "hidden";
-    back.style.visibility = "hidden";
+  
 
   video = document.getElementById('video');
 
@@ -183,6 +192,7 @@ function initCameraUI() {
   video.addEventListener('loadeddata', () => {
             foto.width = video.videoWidth;
             foto.height = video.videoHeight;
+            
             setInterval(() => {
                 photoKey(camX1,camY1,camX2,camY2);
             }, 20)
@@ -460,14 +470,14 @@ changeFoto40.addEventListener("click", function(){
 
 //Camera ON
 function photoKey(x1, y1, x2, y2){    
-  var context = canvas.getContext('2d');
+  //var context = canvas.getContext('2d');
   //context.drawImage(video, 80, 181, 520, 321);
   if( !isMobile.any() && es_firefox) {
     context.drawImage(video, x1-180, y1+10, x2+380, y2-20);
   }else{
     context.drawImage(video, x1, y1, x2, y2);
   }
-    
+  clearInterval(intervalPhotoBooth); 
   context.drawImage(foto.imagen, 0, 0, 1024, 664);
 }
 // Draw image
