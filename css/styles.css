@@ -32,7 +32,7 @@ button:hover {
 	width: 550px;
 	height: 50px;
 	position: absolute;
-	top: 612px;
+	top: 600px;
 }
 .text button{
 	border: 1px solid white;
@@ -40,6 +40,9 @@ button:hover {
 	background-color: #007f5d;
 	color: white;
 	margin-right: 2px;
+}
+.text img{
+	width: 320px;
 }
 button#snap{
 	position: absolute;

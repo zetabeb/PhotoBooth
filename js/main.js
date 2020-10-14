@@ -45,6 +45,7 @@ const photoBooth = document.getElementById('photoBooth'); //Image PhotoBooth
 const save = document.getElementById("save"); //Photo Save
 const back = document.getElementById("back"); //Back
 
+const buttonPose = document.getElementById("buttonPose");
 const changeFoto5 = document.getElementById("foto5");
 const changeFoto10 = document.getElementById("foto10");
 const changeFoto15 = document.getElementById("foto15");
@@ -57,28 +58,28 @@ const changeFoto40 = document.getElementById("foto40");
 var foto ={
 };
 var foto5 = {
-  url: "Images/PHOTO5A0.png"
+  url: "Images/fondos-photoboth0001.png"
 };
 var foto10 = {
-  url: "Images/PHOTO10A0.png"
+  url: "Images/fondos-photoboth0002.png"
 };
 var foto15 = {
-  url: "Images/PHOTO15A0.png"
+  url: "Images/fondos-photoboth0003.png"
 };
 var foto20 = {
-  url: "Images/PHOTO20A0.png"
+  url: "Images/fondos-photoboth0004.png"
 };
 var foto25 = {
-  url: "Images/PHOTO25A0.png"
+  url: "Images/fondos-photoboth0005.png"
 };
 var foto30 = {
-  url: "Images/PHOTO30A0.png"
+  url: "Images/fondos-photoboth0006.png"
 };
 var foto35 = {
-  url: "Images/PHOTO35A0.png"
+  url: "Images/fondos-photoboth0007.png"
 };
 var foto40 = {
-  url: "Images/PHOTO40A0.png"
+  url: "Images/fondos-photoboth0008.png"
 };
 
 foto.imagen = new Image();
@@ -481,6 +482,7 @@ snap.addEventListener("click", function() {
     back.style.visibility = "visible";
     toggleFullScreenButton.style.visibility = "hidden";
     switchCameraButton.style.visibility = "hidden";
+    buttonPose.style.visibility = "hidden";
     changeFoto5.style.visibility = "hidden";
     changeFoto10.style.visibility = "hidden";
     changeFoto15.style.visibility = "hidden";
@@ -522,6 +524,7 @@ back.addEventListener("click", function(){
     switchCameraButton.style.visibility = "visible";
     toggleFullScreenButton.style.visibility = "visible";
     snap.style.visibility = "visible";
+    buttonPose.style.visibility = "visible";
     changeFoto5.style.visibility = "visible";
     changeFoto10.style.visibility = "visible";
     changeFoto15.style.visibility = "visible";
