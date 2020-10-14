@@ -431,26 +431,30 @@ changeFoto25.addEventListener("click", function(){
 changeFoto30.addEventListener("click", function(){    
   foto.imagen.src = foto30.url;
   
-    camX1 = 400;
+    //camX1 = 400;
+    //camY1 = 40;
+    //camX2 = 520;
+    //camY2 = 530;
+    camX1 = 340;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 460;
     camY2 = 530;
  
 });
 changeFoto35.addEventListener("click", function(){    
     foto.imagen.src = foto35.url;
     
-    camX1 = 400;
+    camX1 = 340;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 460;
     camY2 = 530;
   });
 changeFoto40.addEventListener("click", function(){    
     foto.imagen.src = foto40.url;
     
-    camX1 = 400;
+    camX1 = 340;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 460;
     camY2 = 530;
   });
 
