@@ -204,6 +204,11 @@ canvas {
 	
 
 }
+@media (min-width: 1044px) {
+.text{		
+		left: 152px;
+	}
+}
 @media (min-width: 1300px) {
 	.text{
 		font-size: 13px;
@@ -234,12 +239,22 @@ canvas {
 		left: 200px;
 	}
 }
-@media (min-width: 1600px) {
+@media (min-width: 1468px) {
 	.text{
 		left: 280px;
 	}
 }
+@media (min-width: 1680px) {
+	.text{
+		left: 313px;
+	}
+}
 @media (min-width: 1700px) {
+	.text{
+		left: 357px;
+	}
+}
+@media (min-width: 1800px) {
 	.text{
 		width: 550px;
 		left: 383px;

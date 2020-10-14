@@ -14,6 +14,29 @@ var toggleFullScreenButton;
 var switchCameraButton;
 var amountOfCameras = 0;
 var currentFacingMode = 'environment';
+var es_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+var es_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+//is Mobile??
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
 const canvas = document.getElementById('canvas'); //video Stream Visible
 const capture = document.getElementById('capture'); //Canvas of photo capture
@@ -98,6 +121,7 @@ function deviceCount() {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
+  
   // check if mediaDevices is supported
   if (
     navigator.mediaDevices &&
@@ -140,6 +164,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 });
 
+var  camX1 = 280;
+var  camY1 = 40;
+var  camX2 = 520;
+var  camY2 = 530;
+
 function initCameraUI() {
   save.style.visibility = "hidden";
     back.style.visibility = "hidden";
@@ -154,7 +183,7 @@ function initCameraUI() {
             foto.width = video.videoWidth;
             foto.height = video.videoHeight;
             setInterval(() => {
-                photoKey();
+                photoKey(camX1,camY1,camX2,camY2);
             }, 20)
         });
 
@@ -162,7 +191,7 @@ function initCameraUI() {
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
   takePhotoButton.addEventListener('click', function () {
-    takeSnapshotUI();
+    //takeSnapshotUI();
     takeSnapshot();
   });
 
@@ -354,43 +383,98 @@ function createClickFeedbackUI() {
 
 //Change Photo
 changeFoto5.addEventListener("click", function(){    
-    foto.imagen.src = foto5.url;
+  foto.imagen.src = foto5.url;
+  
+    camX1 = 280;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+   
 });
 changeFoto10.addEventListener("click", function(){    
-    foto.imagen.src = foto10.url;
+  foto.imagen.src = foto10.url;
+  
+    camX1 = 280;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+   
 });
 changeFoto15.addEventListener("click", function(){    
-    foto.imagen.src = foto15.url;
+  foto.imagen.src = foto15.url;
+  
+    camX1 = 280;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+   
 });
 changeFoto20.addEventListener("click", function(){    
-    foto.imagen.src = foto20.url;
+  foto.imagen.src = foto20.url;
+  
+    camX1 = 75;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+   
 });
 changeFoto25.addEventListener("click", function(){    
     foto.imagen.src = foto25.url;
+    
+    camX1 = 75;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+  
 });
 changeFoto30.addEventListener("click", function(){    
-    foto.imagen.src = foto30.url;
+  foto.imagen.src = foto30.url;
+  
+    camX1 = 400;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+ 
 });
 changeFoto35.addEventListener("click", function(){    
     foto.imagen.src = foto35.url;
-});
+    
+    camX1 = 400;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+  });
 changeFoto40.addEventListener("click", function(){    
     foto.imagen.src = foto40.url;
-});
+    
+    camX1 = 400;
+    camY1 = 40;
+    camX2 = 520;
+    camY2 = 530;
+  });
 
 //Camera ON
-function photoKey(){    
-    var context = canvas.getContext('2d');
-    //context.drawImage(video, 80, 181, 520, 321);
-    context.drawImage(video, 70, 0, 850, 950);
-    context.drawImage(foto.imagen, 0, 0, 1024, 664);
+function photoKey(x1, y1, x2, y2){    
+  var context = canvas.getContext('2d');
+  //context.drawImage(video, 80, 181, 520, 321);
+  if( !isMobile.any() && es_firefox) {
+    context.drawImage(video, x1-180, y1+10, x2+380, y2-20);
+  }else{
+    context.drawImage(video, x1, y1, x2, y2);
+  }
+    
+  context.drawImage(foto.imagen, 0, 0, 1024, 664);
 }
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
     cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
-    cxt.drawImage(video, 81, 15, 850, 950);
+  if( !isMobile.any() && es_firefox) {
+    cxt.drawImage(video, (camX1+10)-180, (camY1+15)+10, (camX2)+380, (camY2)-20);
+  }else{
+    cxt.drawImage(video, (camX1+10), (camY1+15), (camX2), (camY2));
+  }
     cxt.drawImage(foto.imagen, 11, 0, 1024, 684);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
