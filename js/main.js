@@ -445,27 +445,49 @@ changeFoto30.addEventListener("click", function(){
     //camY1 = 40;
     //camX2 = 520;
     //camY2 = 530;
-    camX1 = 340;
-    camY1 = 40;
-    camX2 = 460;
-    camY2 = 530;
+    if( !isMobile.any() && es_firefox) {
+      camX1 = 340;
+      camY1 = 40;
+      camX2 = 460;
+      camY2 = 530;
+    }else{
+      camX1 = 400;
+      camY1 = 40;
+      camX2 = 520;
+      camY2 = 530;
+    }
+    
  
 });
 changeFoto35.addEventListener("click", function(){    
     foto.imagen.src = foto35.url;
     
-    camX1 = 340;
-    camY1 = 40;
-    camX2 = 460;
-    camY2 = 530;
+    if( !isMobile.any() && es_firefox) {
+      camX1 = 340;
+      camY1 = 40;
+      camX2 = 460;
+      camY2 = 530;
+    }else{
+      camX1 = 400;
+      camY1 = 40;
+      camX2 = 520;
+      camY2 = 530;
+    }
   });
 changeFoto40.addEventListener("click", function(){    
     foto.imagen.src = foto40.url;
     
-    camX1 = 340;
-    camY1 = 40;
-    camX2 = 460;
-    camY2 = 530;
+    if( !isMobile.any() && es_firefox) {
+      camX1 = 340;
+      camY1 = 40;
+      camX2 = 460;
+      camY2 = 530;
+    }else{
+      camX1 = 400;
+      camY1 = 40;
+      camX2 = 520;
+      camY2 = 530;
+    }
   });
 
 //Camera ON
