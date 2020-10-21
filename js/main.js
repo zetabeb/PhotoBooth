@@ -174,9 +174,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
   //clearInterval(intervalPhotoBooth);
 });
 
-var  camX1 = 280;
+var  camX1 = 300;
 var  camY1 = 40;
-var  camX2 = 520;
+var  camX2 = 540;
 var  camY2 = 530;
 
 
@@ -396,27 +396,27 @@ function createClickFeedbackUI() {
 changeFoto5.addEventListener("click", function(){    
   foto.imagen.src = foto5.url;
   
-    camX1 = 280;
+    camX1 = 300;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 540;
     camY2 = 530;
    
 });
 changeFoto10.addEventListener("click", function(){    
   foto.imagen.src = foto10.url;
   
-    camX1 = 280;
+    camX1 = 300;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 540;
     camY2 = 530;
    
 });
 changeFoto15.addEventListener("click", function(){    
   foto.imagen.src = foto15.url;
   
-    camX1 = 280;
+    camX1 = 300;
     camY1 = 40;
-    camX2 = 520;
+    camX2 = 540;
     camY2 = 530;
    
 });
@@ -451,7 +451,7 @@ changeFoto30.addEventListener("click", function(){
       camX2 = 460;
       camY2 = 530;
     }else{
-      camX1 = 400;
+      camX1 = 405;
       camY1 = 40;
       camX2 = 520;
       camY2 = 530;
@@ -468,7 +468,7 @@ changeFoto35.addEventListener("click", function(){
       camX2 = 460;
       camY2 = 530;
     }else{
-      camX1 = 400;
+      camX1 = 405;
       camY1 = 40;
       camX2 = 520;
       camY2 = 530;
@@ -483,7 +483,7 @@ changeFoto40.addEventListener("click", function(){
       camX2 = 460;
       camY2 = 530;
     }else{
-      camX1 = 400;
+      camX1 = 380;
       camY1 = 40;
       camX2 = 520;
       camY2 = 530;
