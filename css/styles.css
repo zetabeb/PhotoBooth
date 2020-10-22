@@ -44,6 +44,26 @@ button:hover {
 .text img{
 	width: 320px;
 }
+.text p{
+	padding: 0px;
+	margin: 0px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	color: #444444;
+}
+.mejorPose{
+	z-index: 120;
+	left: 828px;
+	right: 0px;
+	position: absolute;
+	top: 620px;
+	width: 300px;
+	justify-content: center;
+	align-items: center;
+}
+.mejorPose img{
+	width: 230px;
+}
 button#snap{
 	position: absolute;
 	margin: auto;
@@ -121,6 +141,9 @@ canvas {
 		font-size: 5px;
 		top: 320px;
 	}
+	.text p{
+		font-size: 12px;
+	}
 	button#toggleFullScreenButton{
 		left: 248px;
 	    top: 276px;
@@ -157,6 +180,10 @@ canvas {
 	{
 		top:25px;
 	}
+	.mejorPose{
+		left: 66px;
+		top: 390px;
+	}
 }
 @media (min-width: 701px) {
 	.text{
@@ -180,6 +207,9 @@ canvas {
     right: 150px;
     z-index: 200;
     width: 37px;
+	}
+	.mejorPose{
+		left: 415px;
 	}
 }
 @media (min-width: 1044px) {
@@ -207,7 +237,9 @@ canvas {
 	#extra img{
 		width: 100%;
 	}
-	
+	.mejorPose{
+		left: 500px;
+	}
 
 }
 @media (min-width: 1044px) {
@@ -239,31 +271,50 @@ canvas {
     z-index: 200;
     width: 35px;
 	}
+	.mejorPose{
+		left: 564px;
+	}
 }
 @media (min-width: 1360px) {
 	.text{
 		left: 200px;
+	}
+	.mejorPose{
+		left: 600px;
 	}
 }
 @media (min-width: 1468px) {
 	.text{
 		left: 280px;
 	}
+	.mejorPose{
+		left: 691px;
+	}
 }
 @media (min-width: 1680px) {
 	.text{
 		left: 313px;
+	}
+	.mejorPose{
+		left: 711px;
 	}
 }
 @media (min-width: 1700px) {
 	.text{
 		left: 357px;
 	}
+	.mejorPose{
+		left: 750px;
+	}
+
 }
 @media (min-width: 1800px) {
 	.text{
 		width: 550px;
 		left: 383px;
 		font-size: 15px;
+	}
+	.mejorPose{
+		left: 828px;
 	}
 }
