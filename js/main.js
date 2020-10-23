@@ -44,6 +44,9 @@ const photoBooth = document.getElementById('photoBooth'); //Image PhotoBooth
 //const snap = document.getElementById("snap"); //Capture
 const save = document.getElementById("save"); //Photo Save
 const back = document.getElementById("back"); //Back
+const share = document.getElementById("share");
+
+const imgConverted = document.getElementById("imgConverted");
 
 const buttonPose = document.getElementById("buttonPose");
 const changeFoto5 = document.getElementById("foto5");
@@ -126,6 +129,7 @@ function deviceCount() {
 document.addEventListener('DOMContentLoaded', function (event) {
   save.style.visibility = "hidden";
     back.style.visibility = "hidden";
+    if(share != null)share.style.visibility = "hidden";
   intervalPhotoBooth = setInterval(() => {
                 context.drawImage(foto.imagen, 0, 0, 1024, 664);
             }, 200)
@@ -515,6 +519,7 @@ snap.addEventListener("click", function() {
     cxt.drawImage(foto.imagen, 11, 0, 1024, 684);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
+    if(share!=null)share.style.visibility = "visible";
     back.style.visibility = "visible";
     toggleFullScreenButton.style.visibility = "hidden";
     switchCameraButton.style.visibility = "hidden";
@@ -555,23 +560,33 @@ save.addEventListener("click", function(){
 });
 
 back.addEventListener("click", function(){
-    save.style.visibility = "hidden";
-    back.style.visibility = "hidden";
-    switchCameraButton.style.visibility = "visible";
-    toggleFullScreenButton.style.visibility = "visible";
-    snap.style.visibility = "visible";
-    buttonPose.style.visibility = "visible";
-    changeFoto5.style.visibility = "visible";
-    changeFoto10.style.visibility = "visible";
-    changeFoto15.style.visibility = "visible";
-    changeFoto20.style.visibility = "visible";
-    changeFoto25.style.visibility = "visible";
-    changeFoto30.style.visibility = "visible";
-    changeFoto35.style.visibility = "visible";
-    changeFoto40.style.visibility = "visible";
-    capture.width = capture.width;
+  save.style.visibility = "hidden";
+  back.style.visibility = "hidden";
+  if(share != null)share.style.visibility = "hidden";
+  switchCameraButton.style.visibility = "visible";
+  toggleFullScreenButton.style.visibility = "visible";
+  snap.style.visibility = "visible";
+  buttonPose.style.visibility = "visible";
+  changeFoto5.style.visibility = "visible";
+  changeFoto10.style.visibility = "visible";
+  changeFoto15.style.visibility = "visible";
+  changeFoto20.style.visibility = "visible";
+  changeFoto25.style.visibility = "visible";
+  changeFoto30.style.visibility = "visible";
+  changeFoto35.style.visibility = "visible";
+  changeFoto40.style.visibility = "visible";
+  capture.width = capture.width;
 });
 
 jQuery(document).ready(function($){
     $('.fancybox').fancybox();
 });
+
+if(share!=null){
+  share.addEventListener("click", function(){
+  const dataURI = capture.toDataURL();  
+  console.log(dataURI);
+  imgConverted.src = dataURI;
+  //fbs_click(imgConverted)
+});}
+
