@@ -599,28 +599,35 @@ function fbs_click(TheImg) {
 }
 
 window.fbAsyncInit = function() {
-    FB.init({
-        appId            : '371612584034186',
-        status           : true,
-        cookie           : true,
-        version          : 'v2.10'                
+  FB.init({
+    appId            : '371612584034186',
+    status           : true,
+    cookie           : true,
+    version          : 'v2.10'                
+  });
+
+  $( '.fb-share-image' ).click(function(e){
+    var img = "image.jpg";
+    var desc = "your caption here";
+    var title = 'your title here';
+    var link = 'https://https://zetabeb.github.io/';
+
+    // Open FB share popup
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+            object: {
+                'og:url': link,
+                'og:title': title,
+                'og:description': desc,
+                'og:image': img
+            }
+        })
+    },
+    function (response) {
+        // Action after response
     });
-
-    $( '.fb-share-image' ).click(function(e){
-      console.log("prueba share");
-        e.preventDefault();
-        var image = $(this).siblings('img').attr('src');
-
-        FB.ui(
-                {
-                    method: 'share',
-                    href: $(location).attr('href') + '?og_img=' + image,
-                },
-                function (response) {
-
-                }
-            );
-    })
 };
 
 (function(d, s, id){
