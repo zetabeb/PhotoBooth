@@ -586,7 +586,7 @@ if(share!=null){
   share.addEventListener("click", function(){
     const dataURI = capture.toDataURL();  
     console.log(dataURI);
-    //imgConverted.src = dataURI;
+    imgConverted.src = dataURI;
     //fbs_click(imgConverted)
   });
 }
