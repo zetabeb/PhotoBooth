@@ -591,11 +591,87 @@ if(share!=null){
   });
 }
 
+var Base64Binary = {
+  _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+  
+  /* will return a  Uint8Array type */
+  decodeArrayBuffer: function(input) {
+    var bytes = (input.length/4) * 3;
+    var ab = new ArrayBuffer(bytes);
+    this.decode(input, ab);
+    
+    return ab;
+  },
+
+  removePaddingChars: function(input){
+    var lkey = this._keyStr.indexOf(input.charAt(input.length - 1));
+    if(lkey == 64){
+      return input.substring(0,input.length - 1);
+    }
+    return input;
+  },
+
+  decode: function (input, arrayBuffer) {
+    //get last chars to see if are valid
+    input = this.removePaddingChars(input);
+    input = this.removePaddingChars(input);
+
+    var bytes = parseInt((input.length / 4) * 3, 10);
+    
+    var uarray;
+    var chr1, chr2, chr3;
+    var enc1, enc2, enc3, enc4;
+    var i = 0;
+    var j = 0;
+    
+    if (arrayBuffer)
+      uarray = new Uint8Array(arrayBuffer);
+    else
+      uarray = new Uint8Array(bytes);
+    
+    input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+    
+    for (i=0; i<bytes; i+=3) {  
+      //get the 3 octects in 4 ascii chars
+      enc1 = this._keyStr.indexOf(input.charAt(j++));
+      enc2 = this._keyStr.indexOf(input.charAt(j++));
+      enc3 = this._keyStr.indexOf(input.charAt(j++));
+      enc4 = this._keyStr.indexOf(input.charAt(j++));
+  
+      chr1 = (enc1 << 2) | (enc2 >> 4);
+      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+      chr3 = ((enc3 & 3) << 6) | enc4;
+  
+      uarray[i] = chr1;     
+      if (enc3 != 64) uarray[i+1] = chr2;
+      if (enc4 != 64) uarray[i+2] = chr3;
+    }
+  
+    return uarray;  
+  }
+}
+
+
 function fbs_click(TheImg) {
-    u=TheImg.src;
-   // t=document.title;
+    u=TheImg.src.replace(/data:image\/png;base64,/,'');
+    // t=document.title;
     t=TheImg.getAttribute('alt');
-    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
+    var uintArray = Base64Binary.decode(u);
+var contents="";
+for(var j = 0; j <= uintArray.length-1 ; j++)
+{
+  contents+=uintArray[j];
+}
+console.log(u);
+    var uriencode = encodeURIComponent(u);
+
+    // Chop the front of the image description
+    var encodedPng = u.substring(u.indexOf(',')+1,u.length);
+    // Decode the image from base64
+    var decodedPng = Base64Binary.decode(encodedPng);
+   
+    
+    window.open('http://www.facebook.com/sharer.php?u='+uriencode+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
 }
 
 window.fbAsyncInit = function() {

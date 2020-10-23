@@ -10,7 +10,7 @@
 <div class="all">
 	<div class="video-wrap">
 		<!-- Stream video via webcam Hidden -->
-	    <video id="video" playsinline autoplay hidden="true"></video>
+	    <video id="video" hidden="true" playsinline autoplay ></video>
 	    <canvas id="photoBooth" width="0" height="0"></canvas>
 		<!-- Stream video via webcam Visible -->
 		<canvas id="canvas" width="1024" height="664"></canvas>
@@ -51,8 +51,9 @@
 		</div>		
 	</div>
 	<div>
-		<img src="" id="imgConverted" class="fb-share-image">
-		<!--img src="" id="imgConverted" onclick="fbs_click(this)"-->
+		<!--img src="" id="imgConverted" class="fb-share-image"-->
+		<!--img src="https://imagenpng.com/wp-content/uploads/2015/09/imagenes-png.png" id="imgConverted" onclick="fbs_click(this)"-->
+		<img src="" id="imgConverted" onclick="fbs_click(this)">
 		<!--img src="https://ejerciciode.com/wp-content/uploads/2017/11/Ejemplo-de-debate-300x300.jpg" id="imgConverted">
     	<a href="#" class="fb-share-image">Share</a-->
 	</div>
