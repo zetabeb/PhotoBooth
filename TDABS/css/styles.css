@@ -1,0 +1,273 @@
+body{
+	background-color: #007f5d;
+	justify-content: center;
+	text-align: center;
+}
+
+button{
+	font-weight: bold;
+    cursor: pointer;
+    padding: 1px;
+    margin: 0 10px 20px 0;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 8px 8px 8px 8px;
+    color: white;
+}
+button img{
+	width: 150px;
+	height: auto;
+	max-width: 100%;
+}
+button:hover {
+    background-color: rgba(182,240,228,0.6);
+}
+.video-wrap{
+ 	position: relative; 
+}
+.text{
+	z-index: 120;
+	font-family: Helvetica;	
+	right: 800px;
+	width: 550px;
+	height: 50px;
+	position: absolute;
+	top: 600px;
+}
+.text button{
+	border: 1px solid white;
+	padding: 2px;	
+	background-color: #007f5d;
+	color: white;
+	margin-right: 2px;
+}
+.text p{
+	padding: 0px;
+	margin: 0px;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	color: #444444;
+}
+.mejorPose{
+	z-index: 120;
+	left: 828px;
+	right: 0px;
+	position: absolute;
+	top: 620px;
+	width: 300px;
+	justify-content: center;
+	align-items: center;
+}
+.mejorPose img{
+	width: 230px;
+}
+button#nextPhoto{
+	position: absolute;
+	left: 160px;
+	right: 200px;
+	width: 35px;
+	top: 19px;
+}
+button#previewPhoto{
+	position: absolute;
+    left: 68px;
+    right: 200px;
+    width: 35px;
+    top: 19px;
+}
+button#snap{
+	position: absolute;
+	margin: auto;
+	top: 19px;
+	left: 112px;
+	right: 399px;
+	z-index: 200;
+	width: 35px;
+}
+button#toggleFullScreenButton{
+	position: absolute;
+    left: 256px;
+    right: 200px;
+    width: 35px;
+    top: 19px;
+}
+button#switchCameraButton{
+	position: absolute;
+	left: 207px;
+	right: 200px;
+	width: 35px;
+	top: 19px;
+}
+
+/*
+canvas#canvas{
+	transform: scale(-1,1);
+}
+*/
+
+#zonaCapture{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	top: 10px;
+}
+
+div#zonaCapture div#buttons{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;	
+	top: 626px;
+	left: 550px;
+	right: 0px;
+}
+
+canvas {
+    max-width: 100%;
+}
+#extra img{
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	/*.all{
+		transform: scale(0.6);
+	}*/
+	.video-wrap{
+		/* left: -142px; */
+		/* top: -271px; */
+	}
+	#extra img{
+		width: 100%;
+	}
+	.text{
+		width: 325px;
+		left: 26px;
+		font-size: 5px;
+		top: 320px;
+	}
+	.text p{
+		font-size: 12px;
+	}
+	
+	div#zonaCapture div#buttons
+	{
+		width: 125px;
+		left: 266px;
+		top: 272px;
+		z-index: 199;
+	}
+	div#zonaCapture div#buttons button
+	{
+		width: 60px;
+		margin: 0;
+	}
+	#zonaCapture
+	{
+		top:25px;
+	}
+	.mejorPose{
+		left: 40px;
+		top: 390px;
+	}
+}
+@media (min-width: 701px) {
+	.text{
+		left: 116px;
+		width: 325px;
+	}
+	.mejorPose{
+		left: 415px;
+	}
+}
+@media (min-width: 1044px) {
+	.text{
+		font-size: 12px;
+		width: 334px
+		left: 110px;
+	}
+	/*.all{
+		transform: scale(0.9);
+	}*/
+	.video-wrap{
+		left: 0px;
+		top: 0px;
+	}
+
+	#extra {
+		left: 0px;
+		right: 0px;
+		margin: auto;
+		text-align: center;
+		justify-content: center;
+		width: 1024px;
+	}
+	#extra img{
+		width: 100%;
+	}
+	.mejorPose{
+		left: 500px;
+	}
+
+}
+@media (min-width: 1044px) {
+.text{		
+		left: 152px;
+	}
+}
+@media (min-width: 1300px) {
+	.text{
+		font-size: 13px;
+		width: 408px;
+		left: 190px;
+	}
+	.mejorPose{
+		left: 564px;
+	}
+}
+@media (min-width: 1360px) {
+	.text{
+		left: 200px;
+	}
+	.mejorPose{
+		left: 600px;
+	}
+}
+@media (min-width: 1468px) {
+	.text{
+		left: 280px;
+	}
+	.mejorPose{
+		left: 691px;
+	}
+}
+@media (min-width: 1680px) {
+	.text{
+		left: 313px;
+	}
+	.mejorPose{
+		left: 711px;
+	}
+}
+@media (min-width: 1700px) {
+	.text{
+		left: 357px;
+	}
+	.mejorPose{
+		left: 750px;
+	}
+
+}
+@media (min-width: 1800px) {
+	.text{
+		width: 550px;
+		left: 442px;
+		font-size: 15px;
+	}
+	.mejorPose{
+		left: 828px;
+	}
+}
