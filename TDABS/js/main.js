@@ -576,7 +576,7 @@ snap.addEventListener("click", function() {
     back.style.visibility = "visible";
     toggleFullScreenButton.style.visibility = "hidden";
     switchCameraButton.style.visibility = "hidden";
-    buttonPose.style.visibility = "hidden";
+    //buttonPose.style.visibility = "hidden";
     nextPhoto.style.visibility = "hidden";
     previewPhoto.style.visibility = "hidden";
 });
@@ -614,7 +614,7 @@ back.addEventListener("click", function(){
   switchCameraButton.style.visibility = "visible";
   toggleFullScreenButton.style.visibility = "visible";
   snap.style.visibility = "visible";
-  buttonPose.style.visibility = "visible";
+  //buttonPose.style.visibility = "visible";
   nextPhoto.style.visibility = "visible";
   previewPhoto.style.visibility = "visible";
   
