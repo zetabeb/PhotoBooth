@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     back.style.visibility = "hidden";
     if(share != null)share.style.visibility = "hidden";
   intervalPhotoBooth = setInterval(() => {
-                context.drawImage(foto.imagen, 0, 0, 1024, 664);
+                context.drawImage(foto.imagen, 0, 0, 1280, 720);
             }, 200)
   
 
@@ -188,9 +188,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 });
 
 var  camX1 = 0;
-var  camY1 = 290;
-var  camX2 = 377;
-var  camY2 = 380;
+var  camY1 = 300;
+var  camX2 = 470;
+var  camY2 = 480;
 var  fotoNum = 1;
 
 function initCameraUI() {
@@ -551,12 +551,12 @@ function photoKey(x1, y1, x2, y2){
   //var context = canvas.getContext('2d');
   //context.drawImage(video, 80, 181, 520, 321);
   if( !isMobile.any() && es_firefox) {
-    context.drawImage(video, x1+1, y1+88, x2+100, y2-90);
+    context.drawImage(video, x1+1, y1+90, x2+100, y2-147);
   }else{
     context.drawImage(video, x1, y1+10, x2, y2);
   }
   clearInterval(intervalPhotoBooth); 
-  context.drawImage(foto.imagen, 0, 0, 1024, 664);
+  context.drawImage(foto.imagen, 0, 0, 1280, 720);
 }
 // Draw image
 var cxt = capture.getContext('2d');
@@ -565,11 +565,11 @@ snap.addEventListener("click", function() {
     //cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
   if( !isMobile.any() && es_firefox) {
-    cxt.drawImage(video, (camX1+10)+1, (camY1+15)+88, (camX2)+100, (camY2)-90);
+    cxt.drawImage(video, (camX1+10)+1, (camY1+15)+90, (camX2)+100, (camY2)-147);
   }else{
     cxt.drawImage(video, (camX1+10), (camY1+15), (camX2), (camY2));
   }
-    cxt.drawImage(foto.imagen, 11, 0, 1024, 684);
+    cxt.drawImage(foto.imagen, 11, 0, 1280, 720);
     snap.style.visibility = "hidden";
     save.style.visibility = "visible";
     if(share!=null)share.style.visibility = "visible";

@@ -1,5 +1,5 @@
 body{
-	background-color: #007f5d;
+	background-color: #0301a6;
 	justify-content: center;
 	text-align: center;
 }
@@ -192,7 +192,8 @@ canvas {
 }
 @media (min-width: 701px) {
 	.text{
-		left: 116px;
+		top: 428px;
+		left: 0px;
 		width: 325px;
 	}
 	.mejorPose{
@@ -201,9 +202,10 @@ canvas {
 }
 @media (min-width: 1044px) {
 	.text{
+		top: 660px;
 		font-size: 12px;
 		width: 334px
-		left: 110px;
+		left: 48px;
 	}
 	/*.all{
 		transform: scale(0.9);
@@ -230,15 +232,17 @@ canvas {
 
 }
 @media (min-width: 1044px) {
-.text{		
-		left: 152px;
+.text{
+		top: 660px;		
+		left: 48px;
 	}
 }
 @media (min-width: 1300px) {
 	.text{
+		top: 660px;
 		font-size: 13px;
 		width: 408px;
-		left: 190px;
+		left: 68px;
 	}
 	.mejorPose{
 		left: 564px;
@@ -246,7 +250,8 @@ canvas {
 }
 @media (min-width: 1360px) {
 	.text{
-		left: 200px;
+		top: 660px;
+		left: 124px;
 	}
 	.mejorPose{
 		left: 600px;
@@ -254,7 +259,8 @@ canvas {
 }
 @media (min-width: 1468px) {
 	.text{
-		left: 280px;
+		top: 660px;
+		left: 249px;
 	}
 	.mejorPose{
 		left: 691px;
@@ -262,6 +268,7 @@ canvas {
 }
 @media (min-width: 1680px) {
 	.text{
+		top: 240px;
 		left: 313px;
 	}
 	.mejorPose{
@@ -270,6 +277,7 @@ canvas {
 }
 @media (min-width: 1700px) {
 	.text{
+		top: 296px;
 		left: 357px;
 	}
 	.mejorPose{
@@ -279,8 +287,9 @@ canvas {
 }
 @media (min-width: 1800px) {
 	.text{
+		top: 660px;
 		width: 550px;
-		left: 442px;
+		left: 353px;
 		font-size: 15px;
 	}
 	.mejorPose{
