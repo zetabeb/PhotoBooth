@@ -583,7 +583,7 @@ snap.addEventListener("click", function() {
 
 //Download Image
 save.addEventListener("click", function(){
-    let filename = prompt("Recuerda enviarnos tu foto a contacto@aniversariosbolivar2020.com \n \n Guardar como...",""),
+    let filename = prompt("Use the following hashtags to have your photos automatically posted to our live social media: #TDABSMEETING #TDABSVIRTUAL #TDABSESTHETICS #TDABS \n \n Save as...",""),
     link = document.createElement('a');
 
     //Option cancel
