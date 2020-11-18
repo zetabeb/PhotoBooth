@@ -63,28 +63,28 @@ var context = canvas.getContext('2d');
 var foto ={
 };
 var foto5 = {
-  url: "Images/fondos-photoboth0001.png"
+  url: "Images/5a1.png"
 };
 var foto10 = {
-  url: "Images/fondos-photoboth0002.png"
+  url: "Images/10a1.png"
 };
 var foto15 = {
-  url: "Images/fondos-photoboth0003.png"
+  url: "Images/15a1.png"
 };
 var foto20 = {
-  url: "Images/fondos-photoboth0004.png"
+  url: "Images/20a1.png"
 };
 var foto25 = {
-  url: "Images/fondos-photoboth0005.png"
+  url: "Images/25a1.png"
 };
 var foto30 = {
-  url: "Images/fondos-photoboth0006.png"
+  url: "Images/30a1.png"
 };
 var foto35 = {
-  url: "Images/fondos-photoboth0007.png"
+  url: "Images/35a1.png"
 };
 var foto40 = {
-  url: "Images/fondos-photoboth0008.png"
+  url: "Images/40a1.png"
 };
 
 foto.imagen = new Image();
