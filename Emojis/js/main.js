@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
           // init the UI and the camera stream
           initCameraUI();
-          if(isMobile.any()){initCameraStream();}
+          if(isMobile.any() || es_firefox){initCameraStream();}
         });
       })
       .catch(function (error) {
@@ -197,7 +197,7 @@ var  camY2 = 1000;
 var  fotoNum = 1;
 
 function initCameraUI() {
-  if(!isMobile.any()){
+  if(!isMobile.any() && !es_firefox){
 	Webcam.set({
 			width: 1280,
 			height: 720,
