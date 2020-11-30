@@ -583,7 +583,7 @@ snap.addEventListener("click", function() {
   if( !isMobile.any() && es_firefox) {
     cxt.drawImage(video, camX1, camY1, camX2, camY2);
   }if(isMobile.any()){
-  	context.drawImage(video, x1, y1-100, x2, y2+200);
+  	cxt.drawImage(video, x1, y1-100, x2, y2+200);
   }else{
     cxt.drawImage(video, camX1, camY1, camX2, camY2-250);
   }
