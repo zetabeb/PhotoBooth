@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 context.drawImage(foto.imagen, 0, 0, 1280, 720);
             }, 200)
   
-
+/*
   // check if mediaDevices is supported
   if (
     navigator.mediaDevices &&
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     navigator.mediaDevices
       .getUserMedia({
         audio: false,
-        video: true,
+        video: false,
       })
       .then(function (stream) {
         stream.getTracks().forEach(function (track) {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     alert(
       'Mobile camera is not supported by browser, or there is no camera detected/connected',
     );
-  }
+  }*/
   //clearInterval(intervalPhotoBooth);
 });
 
@@ -195,13 +195,14 @@ var  fotoNum = 1;
 
 function initCameraUI() {
   
-
+  var my_camera = document.getElementById('my_camera');
   video = document.getElementById('video');
 
   takePhotoButton = document.getElementById('snap');
   toggleFullScreenButton = document.getElementById('toggleFullScreenButton');
   switchCameraButton = document.getElementById('switchCameraButton');
 
+/*
   video.addEventListener('loadeddata', () => {
             foto.width = video.videoWidth;
             foto.height = video.videoHeight;
@@ -210,6 +211,15 @@ function initCameraUI() {
                 photoKey(camX1,camY1,camX2,camY2);
             }, 20)
         });
+        */
+   my_camera.addEventListener('loadeddata', () => {
+            foto.width = my_camera.width;
+            foto.height = my_camera.height;
+            
+            setInterval(() => {
+                photoKey(camX1,camY1,camX2,camY2);
+            }, 20)
+        });    
 
   // https://developer.mozilla.org/nl/docs/Web/HTML/Element/button
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
@@ -547,13 +557,15 @@ previewPhoto.addEventListener("click", function(){
   });
 
 //Camera ON
-function photoKey(x1, y1, x2, y2){   
+function photoKey(x1, y1, x2, y2){    
   //var context = canvas.getContext('2d');
   //context.drawImage(video, 80, 181, 520, 321);
   if( !isMobile.any() && es_firefox) {
-    context.drawImage(video, x1, y1, x2, y2);
+    //context.drawImage(video, x1, y1, x2, y2);
+    context.drawImage(my_camera, x1, y1, x2, y2);
   }else{
-    context.drawImage(video, x1, y1, x2, y2+450);
+    //context.drawImage(video, x1, y1, x2, y2+450);
+    context.drawImage(my_camera, x1, y1, x2, y2);
   }
   clearInterval(intervalPhotoBooth); 
   context.drawImage(foto.imagen, 0, 0, 1280, 720);
@@ -561,7 +573,6 @@ function photoKey(x1, y1, x2, y2){
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
-
   capture.style.visibility = "visible";
     //cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
@@ -580,7 +591,6 @@ snap.addEventListener("click", function() {
     //buttonPose.style.visibility = "hidden";
     nextPhoto.style.visibility = "hidden";
     previewPhoto.style.visibility = "hidden";
-
 });
 
 //Download Image
@@ -610,7 +620,6 @@ save.addEventListener("click", function(){
 
 back.addEventListener("click", function(){
   capture.style.visibility = "hidden";
-  //canvas.style.visibility = "hidden";
   save.style.visibility = "hidden";
   back.style.visibility = "hidden";
   if(share != null)share.style.visibility = "hidden";
@@ -622,8 +631,7 @@ back.addEventListener("click", function(){
   previewPhoto.style.visibility = "visible";
   
   capture.width = capture.width;
-  //canvas.width = canvas.width;
-  //canvas.style.visibility = "visible";
+  clearInterval(intervalPhotoBooth); 
 });
 
 jQuery(document).ready(function($){
