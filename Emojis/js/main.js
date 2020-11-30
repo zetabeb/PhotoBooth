@@ -582,9 +582,12 @@ snap.addEventListener("click", function() {
     //cxt.drawImage(video, 90, 189, 520, 321);
   if( !isMobile.any() && es_firefox) {
     cxt.drawImage(video, camX1, camY1, camX2, camY2);
-  }if(isMobile.any()){
-  	cxt.drawImage(video, x1, y1-100, x2, y2+200);
-  }else{
+  }
+  if( isMobile.any() )
+  {
+  	cxt.drawImage(video, camX1, camY1-100, camX2, camY2+200);
+  }
+  else{
     cxt.drawImage(video, camX1, camY1, camX2, camY2-250);
   }
     cxt.drawImage(foto.imagen, 11, 0, 1280, 720);
