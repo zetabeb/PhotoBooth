@@ -8,6 +8,7 @@
 
 //var takeSnapshotUI = createClickFeedbackUI();
 
+
 var video;
 var takePhotoButton;
 var toggleFullScreenButton;
@@ -37,6 +38,8 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+
+
 
 const canvas = document.getElementById('canvas'); //video Stream Visible
 const capture = document.getElementById('capture'); //Canvas of photo capture
@@ -168,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
           // init the UI and the camera stream
           initCameraUI();
-          //initCameraStream();
+          if(isMobile.any()){initCameraStream();}
         });
       })
       .catch(function (error) {
@@ -194,9 +197,20 @@ var  camY2 = 1000;
 var  fotoNum = 1;
 
 function initCameraUI() {
-  
+  if(!isMobile.any()){
+	Webcam.set({
+			width: 1280,
+			height: 720,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+		Webcam.attach( '#my_camera' );
+		video = document.getElementById('video');
+	}else{
+		video = document.getElementById('video2');
+	}
 
-  video = document.getElementById('video');
+  
 
   takePhotoButton = document.getElementById('snap');
   toggleFullScreenButton = document.getElementById('toggleFullScreenButton');
@@ -552,7 +566,10 @@ function photoKey(x1, y1, x2, y2){
   //context.drawImage(video, 80, 181, 520, 321);
   if( !isMobile.any() && es_firefox) {
     context.drawImage(video, x1, y1, x2, y2);
-  }else{
+  }if(isMobile.any()){
+  	context.drawImage(video, x1, y1-100, x2, y2+200);
+  }
+  else{
     context.drawImage(video, x1, y1, x2, y2-250);
   }
   clearInterval(intervalPhotoBooth); 
@@ -566,8 +583,10 @@ snap.addEventListener("click", function() {
     //cxt.drawImage(video, 90, 189, 520, 321);
   if( !isMobile.any() && es_firefox) {
     cxt.drawImage(video, camX1, camY1, camX2, camY2);
+  }if(isMobile.any()){
+  	context.drawImage(video, x1, y1-100, x2, y2+200);
   }else{
-    cxt.drawImage(video, camX1, camY1, camX2, camY2+450);
+    cxt.drawImage(video, camX1, camY1, camX2, camY2-250);
   }
     cxt.drawImage(foto.imagen, 11, 0, 1280, 720);
     snap.style.visibility = "hidden";
