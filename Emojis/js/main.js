@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
           // init the UI and the camera stream
           initCameraUI();
-          initCameraStream();
+          //initCameraStream();
         });
       })
       .catch(function (error) {
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 var  camX1 = 0;
 var  camY1 = 0;
 var  camX2 = 1280;
-var  camY2 = 720;
+var  camY2 = 1000;
 var  fotoNum = 1;
 
 function initCameraUI() {
@@ -547,13 +547,13 @@ previewPhoto.addEventListener("click", function(){
   });
 
 //Camera ON
-function photoKey(x1, y1, x2, y2){   
+function photoKey(x1, y1, x2, y2){    
   //var context = canvas.getContext('2d');
   //context.drawImage(video, 80, 181, 520, 321);
   if( !isMobile.any() && es_firefox) {
     context.drawImage(video, x1, y1, x2, y2);
   }else{
-    context.drawImage(video, x1, y1, x2, y2+450);
+    context.drawImage(video, x1, y1, x2, y2-250);
   }
   clearInterval(intervalPhotoBooth); 
   context.drawImage(foto.imagen, 0, 0, 1280, 720);
@@ -561,7 +561,6 @@ function photoKey(x1, y1, x2, y2){
 // Draw image
 var cxt = capture.getContext('2d');
 snap.addEventListener("click", function() {
-
   capture.style.visibility = "visible";
     //cxt.drawImage(fondoCapture.imagen, 0, 0, 1300, 684);
     //cxt.drawImage(video, 90, 189, 520, 321);
@@ -580,7 +579,6 @@ snap.addEventListener("click", function() {
     //buttonPose.style.visibility = "hidden";
     nextPhoto.style.visibility = "hidden";
     previewPhoto.style.visibility = "hidden";
-
 });
 
 //Download Image
@@ -610,7 +608,6 @@ save.addEventListener("click", function(){
 
 back.addEventListener("click", function(){
   capture.style.visibility = "hidden";
-  //canvas.style.visibility = "hidden";
   save.style.visibility = "hidden";
   back.style.visibility = "hidden";
   if(share != null)share.style.visibility = "hidden";
@@ -622,8 +619,6 @@ back.addEventListener("click", function(){
   previewPhoto.style.visibility = "visible";
   
   capture.width = capture.width;
-  //canvas.width = canvas.width;
-  //canvas.style.visibility = "visible";
 });
 
 jQuery(document).ready(function($){
