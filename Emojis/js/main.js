@@ -561,9 +561,8 @@ previewPhoto.addEventListener("click", function(){
   });
 
 //Camera ON
-function photoKey(x1, y1, x2, y2){    
-  //var context = canvas.getContext('2d');
-  //context.drawImage(video, 80, 181, 520, 321);
+function photoKey(x1, y1, x2, y2){ 
+
   if( !isMobile.any() && es_firefox) {
     context.drawImage(video, x1, y1, x2, y2);
   }if(isMobile.any()){
@@ -595,7 +594,7 @@ snap.addEventListener("click", function() {
     back.style.visibility = "visible";
     toggleFullScreenButton.style.visibility = "hidden";
     switchCameraButton.style.visibility = "hidden";
-    //buttonPose.style.visibility = "hidden";
+    
     nextPhoto.style.visibility = "hidden";
     previewPhoto.style.visibility = "hidden";
 });
@@ -626,18 +625,18 @@ save.addEventListener("click", function(){
 });
 
 back.addEventListener("click", function(){
-  capture.style.visibility = "hidden";
+  //capture.style.visibility = "hidden";
   save.style.visibility = "hidden";
   back.style.visibility = "hidden";
   if(share != null)share.style.visibility = "hidden";
   switchCameraButton.style.visibility = "visible";
   toggleFullScreenButton.style.visibility = "visible";
   snap.style.visibility = "visible";
-  //buttonPose.style.visibility = "visible";
   nextPhoto.style.visibility = "visible";
   previewPhoto.style.visibility = "visible";
   
   capture.width = capture.width;
+  location.reload();
 });
 
 jQuery(document).ready(function($){
